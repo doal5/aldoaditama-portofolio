@@ -20,3 +20,35 @@
   text-align: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+.about {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 2s ease;
+}
+
+.about--visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.projects {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 2s ease;
+}
+
+.projects--visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+.contact {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.contact--visible {
+  transform: translateY(0);
+  opacity: 1;
+}
