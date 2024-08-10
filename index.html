@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="style.css" />
     <title>Aldo Aditama - Portofolio</title>
   </head>
-  <body>
+  <body class="">
     <nav
-      class="navbar navbar-expand-lg navbar-dark shadow-lg"
-      style="background-color: #2c3457">
+      class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top"
+      id="navbar">
       <div class="container-md">
         <a class="navbar-brand" href="../index.html">Aldo Aditama</a>
         <button
@@ -37,6 +37,22 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <div class="form-check form-switch">
+                <input
+                  onchange="toggleIcon()"
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault" />
+                <label
+                  class="form-check-label"
+                  for="flexSwitchCheckDefault"
+                  style="color: white"
+                  ><i id="icon" class="fa-solid fa-sun"></i
+                ></label>
+              </div>
             </li>
           </ul>
         </div>
@@ -73,15 +89,14 @@
     <!-- end social media floatings -->
 
     <!-- jumbotron -->
-    <section class="profile-picture jumbotron text-center">
+    <section class="profile-picture text-center" id="jumbotron">
       <img
         class="shadow-lg rounded-circle img-thumbnail"
         src="img/aldo.jpg"
         alt="aldo aditama"
         width="200" />
-      <h1 class="display-4">Aldo Aditama</h1>
-      <p class="lead">Mahasiswa | Junior Web Developer</p>
-
+      <h1 id="dark-mode" class="display-4">Aldo Aditama</h1>
+      <p class="lead" id="dark-mode">Mahasiswa | Junior Web Developer</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -95,38 +110,39 @@
     <section id="about">
       <div class="container about">
         <div class="row text-center mb-5">
-          <h2>About Me</h2>
+          <h2 id="about">About Me</h2>
         </div>
         <div class="row justify-content-center fs-5 text-center mb-5">
           <div class="col-md-4 mb-3">
-            <div class="card" style="background-color: #b6bbd1">
+            <div class="card" id="card-about">
               Memiliki pengalaman menggunakan bahasa pemrograman PHP dan
               database MySQL. Menggunakan framework Laravel dalam pembuatan
               software berbasis website.
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card" style="background-color: #b6bbd1">
+            <div class="card" id="card-about">
               Kuliah di universitas pamulang jurusan teknik informatika regular
               B (Karyawan). Dapat bekerja secara team maupun individu.
             </div>
           </div>
         </div>
         <div class="row text-center mb-5 fs-5">
-          <a href="cv.pdf" target="_blank" class="navbar-brand">
-            <h5>
-              <span class="badge" style="background-color: #2c3457"
-                >Download cv <i class="fa-solid fa-download"></i
-              ></span>
-            </h5>
+          <a href="Aldo-aditama-cv.pdf" target="_blank" class="navbar-brand">
+            <button class="btn" id="button-download">
+              <h6 id="download-cv">
+                Download cv <i class="fa-solid fa-download"></i>
+              </h6>
+            </button>
           </a>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
+          id="wave"
           fill="#b6bbd1"
           fill-opacity="1"
-          d="M0,128L480,0L960,32L1440,288L1440,320L960,320L480,320L0,320Z"></path>
+          d="M0,128L120,160L240,160L360,256L480,32L600,288L720,0L840,128L960,160L1080,96L1200,32L1320,64L1440,224L1440,320L1320,320L1200,320L1080,320L960,320L840,320L720,320L600,320L480,320L360,320L240,320L120,320L0,320Z"></path>
       </svg>
     </section>
     <!-- End About -->
@@ -135,7 +151,7 @@
     <section id="projects">
       <div class="container projects">
         <div class="row text-center mb-5">
-          <h2>Projects</h2>
+          <h2 id="dark-mode">Projects</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
@@ -253,5 +269,6 @@
   <script
     src="https://kit.fontawesome.com/57ce01442e.js"
     crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/mode.js"></script>
 </html>

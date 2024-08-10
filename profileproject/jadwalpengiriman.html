@@ -24,12 +24,10 @@
       }
     </style>
   </head>
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-dark shadow-lg"
-      style="background-color: #2c3457">
+  <body class="">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top" id="navbar">
       <div class="container-md">
-      <a class="navbar-brand" href="../index.html">Aldo Aditama</a>
+        <a class="navbar-brand" href="../index.html">Aldo Aditama</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,18 +41,29 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="../index.html"
-                >Home</a
-              >
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../index.html#about">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../index.html#project">Projects</a>
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <div class="form-check form-switch">
+                <input
+                  onchange="toggleIcon()"
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault" />
+                <label
+                  class="form-check-label"
+                  for="flexSwitchCheckDefault"
+                  style="color: white"
+                  ><i id="icon" class="fa-solid fa-sun"></i
+                ></label>
+              </div>
             </li>
           </ul>
         </div>
@@ -93,40 +102,39 @@
     <!-- project -->
     <section id="projects">
       <div class="container">
-        <div class="row text-center mt-3 mb-5">
-          <h2>Jadwal Pengiriman</h2>
+        <div class="row text-center">
+          <h2 id="judul">Jadwal Pengiriman</h2>
           <hr />
         </div>
         <div class="row d-flex justify-content-center">
           <div class="col-md-10 mb-3">
             <ul>
               <button
-                class="btn btn-primary btn-sm"
-                style="background-color: #2c3457">
+                class="btn btn-dark btn-sm" id="button">
                 Html
                 <img src="../img/html.png" alt="" style="width: 21px" />
               </button>
               <button
-                class="btn btn-primary btn-sm"
-                style="background-color: #2c3457">
+                class="btn btn-dark btn-sm" id="button"
+                >
                 Bootstrap 5
                 <img src="../img/bootstrap.png" alt="" style="width: 21px" />
               </button>
               <button
-                class="btn btn-primary btn-sm"
-                style="background-color: #2c3457">
+                class="btn btn-dark btn-sm" id="button"
+                >
                 Xampp v3.3.0
                 <img src="../img/xampp.png" alt="" style="width: 21px" />
               </button>
               <button
-                class="btn btn-primary btn-sm"
-                style="background-color: #2c3457">
+                class="btn btn-dark btn-sm" id="button"
+                >
                 PHP 8
                 <img src="../img/php.png" alt="" style="width: 21px" />
               </button>
               <button
-                class="btn btn-primary btn-sm"
-                style="background-color: #2c3457">
+                class="btn btn-dark btn-sm" id="button"
+                >
                 Sweetalert2
                 <img
                   src="../img/sweetalert2.png"
@@ -134,8 +142,8 @@
                   style="width: 21px; border-radius: 50%" />
               </button>
               <button
-                class="btn btn-primary btn-sm"
-                style="background-color: #2c3457">
+                class="btn btn-dark btn-sm" id="button"
+                >
                 Fontawesome
                 <img
                   src="../img/fontawesome.png"
@@ -143,8 +151,8 @@
                   style="width: 21px; border-radius: 50%" />
               </button>
               <button
-                class="btn btn-primary btn-sm"
-                style="background-color: #2c3457">
+                class="btn btn-dark btn-sm" id="button"
+                >
                 Jquery
                 <img
                   src="../img/jquery.png"
@@ -152,8 +160,8 @@
                   style="width: 21px; border-radius: 50%" />
               </button>
               <button
-                class="btn btn-primary btn-sm"
-                style="background-color: #2c3457">
+                class="btn btn-dark btn-sm" id="button"
+                >
                 Admin LTE
                 <img
                   src="../img/Adminlte.png"
@@ -164,22 +172,21 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-7 mb-3"></div>
-          <div class="card mb-3">
+          <div class="card mb-3" id="card">
             <div class="card-body">
               <div class="card-text text-center text-capitalize">
                     <button
-                      class="btn btn-success"
+                    class="btn btn-dark"
+                      id="button-des"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseExample1"
                       aria-expanded="false"
-                      aria-controls="collapseExample"
-                      style="background-color: #2c3457;width: 100%;">
+                      aria-controls="collapseExample">
                       Deskripsi
                     </button>
                 <div class="collapse" id="collapseExample1">
-                  <div class="card card-body shadow-lg">
+                  <div class="card card-body shadow-lg" id="deskripsi">
                     <b
                       >Program ini berfokus pada update pengiriman yang
                       dilakukan oleh kurir, table jadwal yang memudahkan
@@ -192,18 +199,17 @@
               </div>
               <div class="card-text text-center text-capitalize mt-3">
                     <button
-                    class="btn btn-primary"
+                    class="btn btn-dark"
+                    id="button-des"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseExample"
                     aria-expanded="false"
-                    aria-controls="collapseExample"
-                    style="background-color: #2c3457; width: 100%;">
+                    aria-controls="collapseExample">
                     Fitur
                   </button>
                 <div class="collapse" id="collapseExample">
-                  <div class="card card-body shadow-lg ">
-                    
+                  <div class="card card-body shadow-lg" id="deskripsi">
                       <li>
                         <b>login multi user - kepala toko | admin | kurir</b>
                       </li>
@@ -211,7 +217,6 @@
                       <li><b>laporan rentang tanggal</b></li>
                       <li><b>print laporan jadwal pengiriman</b></li>
                       <li><b>update pengiriman kurir</b></li>
-                    
                   </div>
                 </div>
                 </div>
@@ -399,6 +404,7 @@
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
+        id="wave"
           fill="#2c3457"
           fill-opacity="1"
           d="M0,32L68.6,160L137.1,32L205.7,96L274.3,128L342.9,32L411.4,160L480,0L548.6,192L617.1,96L685.7,32L754.3,128L822.9,192L891.4,64L960,160L1028.6,256L1097.1,256L1165.7,192L1234.3,0L1302.9,224L1371.4,192L1440,288L1440,320L1371.4,320L1302.9,320L1234.3,320L1165.7,320L1097.1,320L1028.6,320L960,320L891.4,320L822.9,320L754.3,320L685.7,320L617.1,320L548.6,320L480,320L411.4,320L342.9,320L274.3,320L205.7,320L137.1,320L68.6,320L0,320Z"></path>
@@ -412,4 +418,5 @@
   <script
     src="https://kit.fontawesome.com/57ce01442e.js"
     crossorigin="anonymous"></script>
+    <script src="../js/mode.js"></script>
 </html>

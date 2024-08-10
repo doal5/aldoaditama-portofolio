@@ -1,10 +1,64 @@
-.jumbotron {
+#jumbotron {
   padding-top: 2rem;
+  margin-top: 40px;
   background-color: #b6bbd1;
+}
+
+#card-about {
+  background-color: #b6bbd1;
+}
+
+#button-download {
+  background-color: #b6bbd1;
+}
+
+#about {
+  background-color: #fff;
 }
 
 #projects {
   background-color: #b6bbd1;
+}
+
+.navbar {
+  background-color: #2c3457;
+}
+
+.dark-mode {
+  background-color: #273036;
+}
+
+.dark-mode #wave {
+  fill: #607180;
+}
+
+.dark-mode #jumbotron {
+  padding-top: 2rem;
+  background-color: #607180;
+}
+
+.dark-mode #navbar {
+  background-color: #273036;
+}
+
+.dark-mode #projects {
+  background-color: #607180;
+}
+
+.dark-mode #dark-mode {
+  color: #fff;
+}
+
+.dark-mode #card-about {
+  background-color: #798a98;
+}
+
+.dark-mode #button-download {
+  background-color: #798a98;
+}
+
+.dark-mode #download-cv {
+  color: #fff;
 }
 
 .card {

@@ -84,3 +84,56 @@
     background-color: transparent;
   }
 }
+
+#button {
+  background-color: #2c3457;
+}
+
+#button-des {
+  background-color: #2c3457;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #2c3457;
+}
+
+.dark-mode {
+  background-color: #273036;
+}
+
+.dark-mode #navbar {
+  background-color: #273036;
+}
+
+.dark-mode #projects {
+  background-color: #607180;
+}
+
+.dark-mode #dark-mode {
+  color: #fff;
+}
+
+.dark-mode #card {
+  background-color: #607180;
+}
+
+.dark-mode #button {
+  background-color: #607180;
+}
+
+.dark-mode #button-des {
+  background-color: #607180;
+}
+
+.dark-mode #wave {
+  fill: #273036;
+}
+
+.dark-mode #deskripsi {
+  background-color: #798a98;
+}
+
+#judul {
+  margin-top: 70px;
+}
