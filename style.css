@@ -24,6 +24,10 @@
   background-color: #2c3457;
 }
 
+.icon {
+  color: #798a98 !important;
+}
+
 .dark-mode {
   background-color: #273036;
 }
