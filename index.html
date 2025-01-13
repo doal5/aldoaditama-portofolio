@@ -66,32 +66,7 @@
     </nav>
 
     <!-- Social media floating -->
-    <div class="fixed-bottom">
-      <a
-        href="https://api.whatsapp.com/send?phone=6285942055205&text=Halo%20Aldo%20Aditama,%20saya%20telah%20mmelihat%20portofolio%20anda"
-        target="_blank">
-        <button class="btn-floating whatsapp">
-          <i class="fa-brands fa-whatsapp fa-bounce fa-xl"></i>
-          <span>Hubungi Whatsapp</span>
-        </button>
-      </a>
-    </div>
-    <div class="fixed-bottom">
-      <a href="https://www.instagram.com/doaladtma/" target="_blank">
-        <button class="btn-floating instagram">
-          <i class="fa-brands fa-instagram fa-beat fa-xl"></i>
-          <span>Hubungi Instagram</span>
-        </button>
-      </a>
-    </div>
-    <div class="fixed-bottom">
-      <a href="mailto:adtmadoal@gmail.com">
-        <button class="btn-floating gmail">
-          <i class="fa-regular fa-envelope fa-beat fa-xl"></i>
-          <span>Hubungi Gmail</span>
-        </button>
-      </a>
-    </div>
+    <div id="social-media-container"></div>
     <!-- end social media floatings -->
 
     <!-- jumbotron -->
@@ -102,7 +77,7 @@
         alt="aldo aditama"
         width="200" />
       <h1 id="dark-mode" class="display-4">Aldo Aditama</h1>
-      <p class="lead" id="dark-mode">Mahasiswa | Web Developer</p>
+      <p class="lead" id="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -116,8 +91,9 @@
     <section id="about" class="py-5 bg-light">
       <div class="container">
         <div class="row text-center mb-5">
-          <h2>About Me</h2>
+          <h2 class="text-black">About Me</h2>
           <p class="text-muted">A quick overview of who I am</p>
+          <hr class="thick-hr" />
         </div>
         <div class="row justify-content-center">
           <!-- Card 1 -->
@@ -167,7 +143,8 @@
     <section id="projects">
       <div class="container projects">
         <div class="row text-center mb-5">
-          <h2 id="dark-mode">Projects</h2>
+          <h2 id="dark-mode">Project Experiences</h2>
+          <hr id="thick-hr" />
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
@@ -267,6 +244,19 @@
               </a>
             </div>
           </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <a class="navbar-brand" href="profileproject/kerusakanmesin.html">
+                <img
+                  src="profileproject/sistemkeputusanmobil/hasildiagnosa.png"
+                  class="card-img-top"
+                  alt="cpu" />
+                <div class="card-body">
+                  <p class="card-text">Diagnosa Kerusakan Mobil</p>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -287,4 +277,6 @@
     crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
   <script src="js/mode.js"></script>
+  <script src="js/button.js"></script>
+  <script src="js/typing.js"></script>
 </html>
