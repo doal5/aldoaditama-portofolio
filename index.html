@@ -44,22 +44,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#projects">Projects</a>
             </li>
-            <li class="nav-item">
-              <div class="form-check form-switch">
-                <input
-                  onchange="toggleIcon()"
-                  class="form-check-input"
-                  type="checkbox"
-                  role="switch"
-                  id="flexSwitchCheckDefault" />
-                <label
-                  class="form-check-label"
-                  for="flexSwitchCheckDefault"
-                  style="color: white"
-                  ><i id="icon" class="fa-solid fa-sun"></i
-                ></label>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
@@ -97,7 +81,7 @@
         </div>
         <div class="row justify-content-center">
           <!-- Card 1 -->
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4 card-stack">
             <div class="card shadow-lg border-0 h-100 text-center p-4">
               <div class="icon mb-3 text-primary">
                 <i class="fa-solid fa-code fa-2xl"></i>
@@ -110,7 +94,7 @@
             </div>
           </div>
           <!-- Card 2 -->
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4 card-stack">
             <div class="card shadow-lg border-0 h-100 text-center p-4">
               <div class="icon mb-3 text-primary">
                 <i class="fa-solid fa-users fa-2xl"></i>
@@ -123,7 +107,6 @@
             </div>
           </div>
           <!-- CV Download -->
-
           <div class="col-12 mt-4 text-center">
             <a href="Aldo-aditama-cv.pdf" target="_blank">
               <button class="btn" id="button-download">
@@ -141,14 +124,22 @@
 
     <!-- project -->
     <section id="projects">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L102.9,0L205.7,96L308.6,32L411.4,128L514.3,288L617.1,160L720,96L822.9,224L925.7,192L1028.6,192L1131.4,64L1234.3,128L1337.1,256L1440,64L1440,0L1337.1,0L1234.3,0L1131.4,0L1028.6,0L925.7,0L822.9,0L720,0L617.1,0L514.3,0L411.4,0L308.6,0L205.7,0L102.9,0L0,0Z"></path>
+      </svg>
+
       <div class="container projects">
         <div class="row text-center mb-5">
           <h2 id="dark-mode">Project Experiences</h2>
           <hr id="thick-hr" />
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <!-- Card 1 -->
+          <div class="col-md-4 mb-4 project-card">
+            <div class="card shadow-lg border-0 h-100 text-center p-4">
               <a
                 class="navbar-brand"
                 href="profileproject/jadwalpengiriman.html">
@@ -156,14 +147,14 @@
                   src="profileproject/jadwalpengiriman/inputjadwal-jadwalpengiriman.png"
                   class="card-img-top"
                   alt="monitor" />
-                <div class="card-body">
-                  <p class="card-text text-center">Jadwal Pengiriman</p>
-                </div>
+
+                <p class="card-text text-center">Jadwal Pengiriman</p>
               </a>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <!-- Card 2 -->
+          <div class="col-md-4 mb-5 project-card">
+            <div class="card shadow-lg border-0 h-100 text-center p-4">
               <a
                 class="navbar-brand"
                 href="profileproject/penyewaan-fifadventure.html">
@@ -171,94 +162,107 @@
                   src="profileproject/fifadventure/halaman-utama.png"
                   class="card-img-top"
                   alt="motherboard" />
-                <div class="card-body">
-                  <p class="card-text">Penyewaan Alat Outdoor</p>
-                </div>
-              </a>
+                <div class="">
+                  <p class="card-text text-center">Penyewaan Alat Outdoor</p>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <!-- Card 3 -->
+          <div class="col-md-4 mb-4 project-card">
+            <div class="card shadow-lg border-0 h-100 text-center p-4">
               <a
                 class="navbar-brand"
                 href="profileproject/pos-tokokomputer.html">
                 <img
                   src="profileproject/pos-lsp/uidashboard.png"
                   class="card-img-top"
-                  alt="motherboard" />
-                <div class="card-body">
-                  <p class="card-text">Point of sales toko komputer</p>
-                </div>
-              </a>
+                  alt="pos" />
+                <div class="p-2">
+                  <p class="card-text text-center">
+                    Point of Sales Toko Komputer
+                  </p>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <!-- Card 4 -->
+          <div class="col-md-4 mb-4 project-card mb-2">
+            <div class="card shadow-lg border-0 h-100 text-center p-4">
               <a class="navbar-brand" href="profileproject/studio-foto.html">
                 <img
                   src="profileproject/studiofoto/halamanutama.png"
                   class="card-img-top"
-                  alt="mouse" />
-                <div class="card-body">
-                  <p class="card-text">Foto Studio</p>
+                  alt="studio" />
+                  <div class="">
+
+                    <p class="card-text text-center">Foto Studio</p>
+                  </a>
                 </div>
-              </a>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <!-- Card 5 -->
+          <div class="col-md-4 mb-4 project-card">
+            <div class="card shadow-lg border-0 h-100 text-center p-4">
               <a class="navbar-brand" href="profileproject/e-commerce.html">
                 <img
                   src="profileproject/e-commerce/utama.png"
                   class="card-img-top"
-                  alt="cpu" />
-                <div class="card-body">
-                  <p class="card-text">E-commerce</p>
-                </div>
-              </a>
+                  alt="ecommerce" />
+<div class="">
+  <p class="card-text text-center">E-commerce</p>
+</a>
+</div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <!-- Card 6 -->
+          <div class="col-md-4 mb-4 project-card">
+            <div class="card shadow-lg border-0 h-100 text-center p-4">
               <a class="navbar-brand" href="profileproject/kamus.html">
                 <img
                   src="profileproject/kamus/utama.png"
                   class="card-img-top"
-                  alt="cpu" />
-                <div class="card-body">
-                  <p class="card-text">Kamus</p>
-                </div>
-              </a>
+                  alt="kamus" />
+<div class="">
+
+  <p class="card-text text-center">Kamus</p>
+</a>
+</div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <!-- Card 7 -->
+          <div class="col-md-4 mb-4 project-card">
+            <div class="card shadow-lg border-0 h-100 text-center p-4">
               <a class="navbar-brand" href="profileproject/companyprofile.html">
                 <img
                   src="profileproject/company-profile/1.png"
                   class="card-img-top"
-                  alt="cpu" />
-                <div class="card-body">
-                  <p class="card-text">Company Profile</p>
-                </div>
-              </a>
+                  alt="company profile" />
+<div class="">
+
+  <p class="card-text text-center">Company Profile</p>
+</a>
+</div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <!-- Card 8 -->
+          <div class="col-md-4 mb-4 project-card">
+            <div class="card shadow-lg border-0 h-100 text-center p-4">
               <a class="navbar-brand" href="profileproject/kerusakanmesin.html">
                 <img
                   src="profileproject/sistemkeputusanmobil/hasildiagnosa.png"
                   class="card-img-top"
-                  alt="cpu" />
-                <div class="card-body">
-                  <p class="card-text">Diagnosa Kerusakan Mobil</p>
+                  alt="kerusakan mesin" />
+                  <div class="">
+
+                    <p class="card-text text-center">Diagnosa Kerusakan Mobil</p>
+                  </a>
                 </div>
-              </a>
             </div>
           </div>
         </div>
       </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -266,6 +270,7 @@
           d="M0,32L68.6,160L137.1,32L205.7,96L274.3,128L342.9,32L411.4,160L480,0L548.6,192L617.1,96L685.7,32L754.3,128L822.9,192L891.4,64L960,160L1028.6,256L1097.1,256L1165.7,192L1234.3,0L1302.9,224L1371.4,192L1440,288L1440,320L1371.4,320L1302.9,320L1234.3,320L1165.7,320L1097.1,320L1028.6,320L960,320L891.4,320L822.9,320L754.3,320L685.7,320L617.1,320L548.6,320L480,320L411.4,320L342.9,320L274.3,320L205.7,320L137.1,320L68.6,320L0,320Z"></path>
       </svg>
     </section>
+
     <!-- end projects -->
   </body>
   <script
