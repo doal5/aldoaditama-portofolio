@@ -271,8 +271,19 @@ body {
   border: 2px solid #fff;
 }
 
-@media (max-width: 576px) {
-  .btn-floating {
+@media screen and (max-width: 768px) {
+  body {
+    padding: 50px 20px;
+  }
+  .profile-picture img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .card {
+    padding: 20px;
+  }
+   .btn-floating {
     background-color: transparent;
   }
 }
+
