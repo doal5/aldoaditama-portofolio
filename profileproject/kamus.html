@@ -210,7 +210,9 @@
                 src="kamus/login.png"
                 class="rounded img-fluid"
                 alt="..."
-                style="width: 800px" />
+                style="width: 800px"
+                    data-bs-toggle="modal"
+                data-bs-target="#imageModal" />
               <div class="carousel-caption d-none d-md-block">
                 <h5> <font color="black">Login</font> </h5>
               </div>
@@ -221,7 +223,9 @@
                   src="kamus/utama.png"
                   class="rounded img-fluid"
                   alt="..."
-                  style="width: 800px" />
+                  style="width: 800px"
+                      data-bs-toggle="modal"
+                data-bs-target="#imageModal" />
                   <div class="carousel-caption d-none d-md-block">
                 <h5> <font color="black"></font> </h5>
               </div>
@@ -233,7 +237,9 @@
                   src="kamus/cari.png"
                   class="rounded img-fluid"
                   alt="..."
-                  style="width: 800px" />
+                  style="width: 800px"
+                      data-bs-toggle="modal"
+                data-bs-target="#imageModal" />
                   <div class="carousel-caption d-none d-md-block">
                 <h5> <font color="black"></font> </h5>
               </div>
@@ -244,21 +250,27 @@
                 src="kamus/penjelasan.png"
                 class="rounded img-fluid"
                 alt="..."
-                style="width: 800px" />
+                style="width: 800px"
+                    data-bs-toggle="modal"
+                data-bs-target="#imageModal" />
             </div>
             <div class="carousel-item">
               <img
                 src="kamus/fitur.png"
                 class="rounded img-fluid"
                 alt="..."
-                style="width: 800px" />
+                style="width: 800px"
+                    data-bs-toggle="modal"
+                data-bs-target="#imageModal" />
             </div>
             <div class="carousel-item">
               <img
                 src="kamus/tentang.png"
                 class="rounded img-fluid"
                 alt="..."
-                style="width: 800px" />
+                style="width: 800px"
+                    data-bs-toggle="modal"
+                data-bs-target="#imageModal" />
             </div>
           </div>
           <button
@@ -279,7 +291,20 @@
           </button>
         </div>
       </div>
-    
+     <!-- Modal Image -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img
+              id="modal-image"
+              src=""
+              class="img-fluid w-100"
+              alt="Modal Image" />
+          </div>
+        </div>
+      </div>
+    </div>
     </section>
   </body>
   <script
@@ -291,4 +316,5 @@
     crossorigin="anonymous"></script>
      <script src="../js/mode.js"></script>
       <script src="button.js"></script>
+        <script src="modal.js"></script>
 </html>
