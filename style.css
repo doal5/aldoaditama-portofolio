@@ -17,13 +17,6 @@ body {
   -webkit-backdrop-filter: blur(8px); /* Dukungan browser lama */
 }
 
-.navbar a {
-  color: #798a98
-  text-decoration: none;
-  padding: 0 1rem;
-  transition: color 0.3s;
-}
-
 .navbar a:hover {
   color: #798a98;
 }
@@ -164,8 +157,6 @@ body {
   color: #333;
 }
 
-
-
 .dark-mode .about {
   background-color: #607180;
   transform: translateY(20px);
@@ -177,7 +168,6 @@ body {
   transform: translateY(0);
   opacity: 1;
 }
-
 
 .projects {
   transform: translateY(20px);
@@ -282,8 +272,7 @@ body {
   .card {
     padding: 20px;
   }
-   .btn-floating {
+  .btn-floating {
     background-color: transparent;
   }
 }
-
