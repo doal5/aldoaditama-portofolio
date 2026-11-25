@@ -1253,6 +1253,10 @@ body.dark-mode .stage-floor {
   grid-column: span 6;
 }
 
+.project-card:nth-child(n + 8) {
+  grid-column: span 6;
+}
+
 .project-card:hover {
   --lift: -6px;
   border-color: rgba(152, 162, 255, 0.5);
