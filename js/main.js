@@ -127,35 +127,4 @@
       deck.style.setProperty("--deck-rx", "3deg");
     });
   }
-
-  /* ---------- Project card tilt ---------- */
-
-  if (finePointer && !reduceMotion) {
-    document.querySelectorAll(".project-card").forEach((card) => {
-      let frame = 0;
-
-      card.addEventListener("pointermove", (event) => {
-        const rect = card.getBoundingClientRect();
-        const px = (event.clientX - rect.left) / rect.width;
-        const py = (event.clientY - rect.top) / rect.height;
-
-        cancelAnimationFrame(frame);
-        frame = requestAnimationFrame(() => {
-          card.style.setProperty(
-            "--tiltX",
-            `${((0.5 - py) * 8).toFixed(2)}deg`
-          );
-          card.style.setProperty("--tiltY", `${((px - 0.5) * 10).toFixed(2)}deg`);
-          card.style.setProperty("--mx", `${(px * 100).toFixed(1)}%`);
-          card.style.setProperty("--my", `${(py * 100).toFixed(1)}%`);
-        });
-      });
-
-      card.addEventListener("pointerleave", () => {
-        cancelAnimationFrame(frame);
-        card.style.setProperty("--tiltX", "0deg");
-        card.style.setProperty("--tiltY", "0deg");
-      });
-    });
-  }
 })();

@@ -101,11 +101,11 @@
 .project-title {
   max-width: 15ch;
   margin: 0.85rem 0 0;
-  font-family: var(--font-display);
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-weight: 600;
   font-size: clamp(3rem, 6.1vw, 5.6rem);
-  line-height: 0.92;
-  letter-spacing: -0.035em;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
@@ -299,11 +299,11 @@
 
 .project-info__title {
   margin: 0.9rem 0 1.9rem;
-  font-family: var(--font-display);
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-weight: 600;
   font-size: clamp(2.35rem, 4.3vw, 3.8rem);
-  line-height: 0.94;
-  letter-spacing: -0.03em;
+  line-height: 1;
+  letter-spacing: -0.025em;
 }
 
 .project-info__title em {
@@ -532,11 +532,11 @@
 
 .gallery-title {
   margin-top: 0.85rem;
-  font-family: var(--font-display);
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-weight: 600;
   font-size: clamp(2.5rem, 5vw, 4.3rem);
-  line-height: 0.94;
-  letter-spacing: -0.03em;
+  line-height: 1;
+  letter-spacing: -0.025em;
 }
 
 .gallery-title em {
