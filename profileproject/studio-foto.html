@@ -20,12 +20,26 @@
     <a class="skip-link" href="#main">Lewati ke konten utama</a>
     <div class="page-grain" aria-hidden="true"></div>
 
+    <div class="page-shapes" aria-hidden="true">
+      <span class="page-shape page-shape--circle"></span>
+      <span class="page-shape page-shape--square"></span>
+      <span class="page-shape page-shape--ring"></span>
+      <span class="page-shape page-shape--cross"></span>
+    </div>
+
     <header class="site-header">
       <nav class="nav" aria-label="Navigasi utama">
         <a class="brand" href="../index.html" aria-label="Aldo Aditama — kembali ke portofolio">
-          <span class="brand-mark" aria-hidden="true">A</span>
           <span class="brand-text">Aldo Aditama</span>
         </a>
+
+        <span class="nav-signal" aria-hidden="true">
+          <span class="nav-signal__rail"></span>
+          <span class="nav-signal__dial">
+            <span class="nav-signal__node"></span>
+          </span>
+          <span class="nav-signal__rail"></span>
+        </span>
 
         <button
           class="nav-toggle"
@@ -39,10 +53,27 @@
 
         <div class="nav-menu" id="navMenu">
           <div class="nav-links">
-            <a class="nav-link" href="../index.html#home">Home</a>
-            <a class="nav-link" href="../index.html#about">About</a>
-            <a class="nav-link" href="../index.html#skills">Skills</a>
-            <a class="nav-link is-active" href="../index.html#projects">Projects</a>
+            <a class="nav-link" href="../index.html#home" data-i18n-key="nav.home">Beranda</a>
+            <a class="nav-link" href="../index.html#about" data-i18n-key="nav.about">Tentang</a>
+            <a class="nav-link" href="../index.html#skills" data-i18n-key="nav.skills">Keahlian</a>
+            <a class="nav-link is-active" href="../index.html#projects" data-i18n-key="nav.projects">Proyek</a>
+          </div>
+
+          <div class="lang-switch" role="group" aria-label="Bahasa / Language">
+            <button
+              class="lang-btn is-active"
+              type="button"
+              data-lang="id"
+              aria-pressed="true">
+              ID
+            </button>
+            <button
+              class="lang-btn"
+              type="button"
+              data-lang="en"
+              aria-pressed="false">
+              EN
+            </button>
           </div>
 
           <div class="theme-switch">
@@ -545,6 +576,8 @@
       crossorigin="anonymous"></script>
     <script src="../js/mode.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/i18n-dict.js"></script>
+    <script src="../js/i18n.js"></script>
     <script src="detail.js"></script>
   </body>
 </html>

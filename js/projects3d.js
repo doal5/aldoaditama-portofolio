@@ -116,6 +116,7 @@ const canvasHost = document.querySelector("[data-projects-canvas]");
 const linkEl = document.querySelector("[data-projects-link]");
 const indexEl = document.querySelector("[data-projects-index]");
 const subEl = document.querySelector("[data-projects-sub]");
+const t = (value) => (window.AltoI18n ? window.AltoI18n.text(value) : value);
 
 const reduceMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
@@ -834,11 +835,11 @@ function start(projects) {
       state.lastFront = front;
       const project = items[front].project;
       if (linkEl) {
-        linkEl.textContent = project.title;
+        linkEl.textContent = t(project.title);
         linkEl.href = project.url;
       }
       if (indexEl) indexEl.textContent = project.index;
-      if (subEl) subEl.textContent = project.subtitle;
+      if (subEl) subEl.textContent = t(project.subtitle);
     }
 
     if (state.pointerDirty) {
@@ -848,6 +849,12 @@ function start(projects) {
 
     renderer.render(scene, camera);
   };
+
+  window.addEventListener("i18n:change", () => {
+    const project = items[mod(Math.round(state.position), count)].project;
+    if (linkEl) linkEl.textContent = t(project.title);
+    if (subEl) subEl.textContent = t(project.subtitle);
+  });
 
   /* ---------- Auto-advance ---------- */
 

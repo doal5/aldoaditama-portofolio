@@ -6,6 +6,8 @@
   ).matches;
   const finePointer = window.matchMedia("(pointer: fine)").matches;
 
+  const t = (value) => (window.AltoI18n ? window.AltoI18n.text(value) : value);
+
   /* ---------- Screenshot gallery ---------- */
 
   document.querySelectorAll("[data-gallery]").forEach((gallery) => {
@@ -30,16 +32,15 @@
     );
 
     const dots = [];
+    const dotLabel = (i) =>
+      t(`Tampilkan tangkapan layar ${i + 1}: ${captions[i]}`);
 
     if (dotsWrap) {
       captions.forEach((caption, i) => {
         const dot = document.createElement("button");
         dot.type = "button";
         dot.className = "gallery-dot";
-        dot.setAttribute(
-          "aria-label",
-          `Tampilkan tangkapan layar ${i + 1}: ${caption}`
-        );
+        dot.setAttribute("aria-label", dotLabel(i));
         dot.setAttribute("aria-current", i === 0 ? "true" : "false");
         dot.addEventListener("click", () => goTo(i));
         dotsWrap.appendChild(dot);
@@ -50,7 +51,7 @@
     const update = (nextIndex) => {
       index = ((nextIndex % total) + total) % total;
 
-      if (captionEl) captionEl.textContent = captions[index];
+      if (captionEl) captionEl.textContent = t(captions[index]);
       if (currentEl) currentEl.textContent = pad(index + 1);
 
       dots.forEach((dot, i) => {
@@ -111,6 +112,11 @@
           behavior: "auto",
         });
       }, 160);
+    });
+
+    window.addEventListener("i18n:change", () => {
+      if (captionEl) captionEl.textContent = t(captions[index]);
+      dots.forEach((dot, i) => dot.setAttribute("aria-label", dotLabel(i)));
     });
 
     update(0);
